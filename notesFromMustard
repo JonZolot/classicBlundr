@@ -1,0 +1,9 @@
+Sounds like a good MVP is an SPA. If you wanted to have profiles and let anyone save or store something, you'd want something like Firestore or MongoDB to store the user's syllogisms or something. You can test it out in localStorage while developing the front-end first that way if you want to build the UX before the back-end.
+
+Then you'd want to stand up maybe some kind of OAuth, maybe connected through their Discord account.
+
+You could still keep revision history in the database, although it wouldn't be something quite as clean as just looking at the diff in git, but then nothing ever is, it's probably not a huge deal for a V1.
+
+Making people learn git to update their data isn't the greatest UX I think, so a simple SPA stood up in something like SvelteKit or React built on Vite, deployed to Render or something.
+
+You'll probably want to find an existing library for something like the validity checker.
