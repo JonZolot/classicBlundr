@@ -1,16 +1,16 @@
 import './index.css';
 import { fetchSyllogismTree } from './api/fetchSyllogismTree';
-import { renderSyllogismTree } from './render/renderSyllogismTree';
+import { renderSyllogism } from './lib/renderSyllogism';
 
 async function init() {
-  const rootId = '00000000-0000-0000-0000-000000000001'; // your test root
+  const rootId = '00000000-0000-0000-0000-000000000002'; // your test root
 
   const tree = await fetchSyllogismTree(rootId);
   if (!tree) return;
 
   const mount = document.getElementById('app');
   if (mount) {
-    mount.appendChild(renderSyllogismTree(tree));
+   mount.innerHTML = renderSyllogism(tree);
   }
 }
 
